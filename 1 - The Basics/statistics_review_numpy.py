@@ -34,7 +34,7 @@ elif opt == 2:
 
 
 def text_to_list(text):
-    final = list(text.split(", "))
+    final = list(text.split(","))
     return final
 
 
