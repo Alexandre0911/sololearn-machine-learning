@@ -15,19 +15,19 @@ while opt == 666:
 
 
 if opt == 0:
-    with open("C:\\Users\\vampi\\Documents\\GitHub\\sololearn-machine-learning\\1 - The Basics\\alex2206", "r") as list_file:
+    with open("C:\\Users\\vampi\\Documents\\GitHub\\sololearn-machine-learning\\1 - The Basics\\data.txt", "r") as list_file:
         temp_list = list_file.read()
     list_file.close()
 
 elif opt == 1:
     numbers_to_append = int(input("Numbers To Append >>> "))
-    with open("C:\\Users\\vampi\\Documents\\GitHub\\sololearn-machine-learning\\1 - The Basics\\alex2206", "a") as list_file:
+    with open("C:\\Users\\vampi\\Documents\\GitHub\\sololearn-machine-learning\\1 - The Basics\\data.txt", "a") as list_file:
         list_file.write(numbers_to_append)
         temp_list = list_file.read()
     list_file.close()
 
 elif opt == 2:
-    with open("C:\\Users\\vampi\\Documents\\GitHub\\sololearn-machine-learning\\1 - The Basics\\alex2206", "w") as list_file:
+    with open("C:\\Users\\vampi\\Documents\\GitHub\\sololearn-machine-learning\\1 - The Basics\\data.txt", "w") as list_file:
         list_file.write("")
     list_file.close()
 
