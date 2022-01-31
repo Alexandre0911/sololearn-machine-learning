@@ -1,3 +1,7 @@
+from math import *
+
+
+
 my_list = []
 opt = 666
 
@@ -29,7 +33,7 @@ elif opt == 2:
 
 
 def text_to_list(text):
-    final = list(text.split(","))
+    final = list(text.split(", "))
     return final
 
 
@@ -43,17 +47,35 @@ print("{}\n\n".format(my_list))
 
 def mean_and_percentiles():
 
-    # MEAN #
+    #! MEAN #
 
     mean = 0
 
-    for i in my_list:
-        mean = mean + i
-        #print(i)               # Debugging
+    for num in my_list:
+        mean = mean + num
+        #*print(i)               # Debugging
     
     mean = mean / len(my_list)
 
-    # PERCENTILES #
+    #! PERCENTILES & OTHERS #
+
+    temp_list = [int(num) for num in my_list]
+
+    distance_list = []
+    for num in temp_list:
+        distance_list.append(abs(int(mean - num)))
+
+    #*print(distance_list)               # Debugging
+    
+    variance_list = []
+    for num in distance_list:
+        variance_list.append(num**2)
+        variance = sum(variance_list) / len(variance_list)
+    
+    #*print("{:.2f}".format(variance))               # Debugging
+
+    std_dev = sqrt(variance)
+
 
     if len(my_list) % 2 != 0:
         temp = int(len(my_list))
@@ -61,10 +83,12 @@ def mean_and_percentiles():
         _50th = my_list[int(temp * .5)]
         _75th = my_list[int(temp * .75)]
 
-        print("(Odd List) Mean Value >>> {:.1f}".format(mean))
-        print("(Odd List) 25th Percentile Value >>> {:.0f}".format(_25th))
-        print("(Odd List) 50th Percentile Value >>> {:.0f}".format(_50th))
-        print("(Odd List) 75th Percentile Value >>> {:.0f}".format(_75th))
+        print("(Odd List) Mean Value >>> {:.2f}".format(mean))
+        print("(Odd List) 25th Percentile Value >>> {:.2f}".format(_25th))
+        print("(Odd List) 50th Percentile Value >>> {:.2f}".format(_50th))
+        print("(Odd List) 75th Percentile Value >>> {:.2f}".format(_75th))
+        print("(Odd List) Variance Value >>> {:.2f}".format(variance))
+        print("(Odd List) Standard Deviation Value >>> {:.2f}".format(std_dev))
 
     else:
         temp = int(len(my_list) - 1)
@@ -72,10 +96,12 @@ def mean_and_percentiles():
         _50th = (int(my_list[int(temp * .5)]) + int(my_list[int(temp * .5) + 1])) / 2
         _75th = int(my_list[int(temp * .75)])
 
-        print("(Even List) Mean Value >>> {:.1f}".format(mean))
-        print("(Even List) 25th Percentile Value >>> {:.0f}".format(_25th))
-        print("(Even List) 50th Percentile Value >>> {:.1f}".format(_50th))
-        print("(Even List) 75th Percentile Value >>> {:.0f}".format(_75th))
+        print("(Even List) Mean Value >>> {:.2f}".format(mean))
+        print("(Even List) 25th Percentile Value >>> {:.2f}".format(_25th))
+        print("(Even List) 50th Percentile Value >>> {:.2f}".format(_50th))
+        print("(Even List) 75th Percentile Value >>> {:.2f}".format(_75th))
+        print("(Even List) Variance Value >>> {:.2f}".format(variance))
+        print("(Even List) Standard Deviation Value >>> {:.2f}".format(std_dev))
         
 
 
