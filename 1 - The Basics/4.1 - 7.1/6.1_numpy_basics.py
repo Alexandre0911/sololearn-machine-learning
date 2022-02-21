@@ -2,7 +2,7 @@ import pandas as pd
 
 
 
-df = pd.read_csv('C:\\Users\\vampi\\Documents\\GitHub\\sololearn-machine-learning\\1 - The Basics\\4.1\\titanic.csv')           #! The "df" object is a DataFrame which contains a Titanic DataSet
+df = pd.read_csv('C:\\Users\\vampi\\Documents\\GitHub\\sololearn-machine-learning\\1 - The Basics\\4.1 - 7.1\\titanic.csv')           #! The "df" object is a DataFrame which contains a Titanic DataSet
 
 
 

@@ -3,7 +3,7 @@ pd.options.display.max_columns = 6         #? Option to make pandas display a ma
 
 
 
-df = pd.read_csv('C:\\Users\\vampi\\Documents\\GitHub\\sololearn-machine-learning\\1 - The Basics\\4.1\\titanic.csv')           #! The "df" object is a DataFrame which contains a Titanic DataSet
+df = pd.read_csv('C:\\Users\\vampi\\Documents\\GitHub\\sololearn-machine-learning\\1 - The Basics\\4.1 - 7.1\\titanic.csv')           #! The "df" object is a DataFrame which contains a Titanic DataSet
 
 
 
