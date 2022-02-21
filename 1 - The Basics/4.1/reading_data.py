@@ -12,8 +12,4 @@ print(df.describe())            #! describe() function returns a table of statis
 
 
 
-col = df['Fare']          #* To select a single column, we use the square brackets and the column name.
-print(col)
-
-
 #! You should uncomment or comment whatever you want or not to be run!
